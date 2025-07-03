@@ -13,3 +13,7 @@ function removeDuplicates(nums) {
     
     return slow + 1; // Length of unique elements
 }
+
+const arr1 = [1, 1, 2, 2, 3, 4, 4];
+console.log(removeDuplicates(arr1)); 
+console.log(arr1);
