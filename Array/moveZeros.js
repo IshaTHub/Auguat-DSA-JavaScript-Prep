@@ -13,7 +13,7 @@ var moveZeroes = function(nums) {
         }
     }
 
-    // Step 2: Fill the remaining positions with zeroes
+    Step 2: Fill the remaining positions with zeroes
     for (let i = insertPos; i < nums.length; i++) {
         nums[i] = 0;
     }
