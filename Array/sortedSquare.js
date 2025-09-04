@@ -1,5 +1,5 @@
 function sortedSquares(nums) {
-    // Your code here
+   
     const result = new Array(nums.length);
     let left = 0;
     let right = nums.length - 1;
