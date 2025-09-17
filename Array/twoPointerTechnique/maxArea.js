@@ -20,3 +20,6 @@ function maxArea(height){
 
 let height = [2,3,4,5,8,6,4,5];
 
+
+
+
