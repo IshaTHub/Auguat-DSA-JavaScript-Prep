@@ -1,0 +1,8 @@
+Is the array sorted?
+├─ YES → Likely Opposite Direction
+│   ├─ Finding pairs/sums? → Opposite Direction ✓
+│   └─ Finding subarrays? → Consider Same Direction
+└─ NO → 
+    ├─ Need to find cycles/middle? → Fast & Slow ✓
+    ├─ Working with subarrays? → Same Direction ✓
+    └─ Can sort the array? → Sort first, then Opposite Direction
