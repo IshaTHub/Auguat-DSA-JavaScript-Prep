@@ -9,7 +9,7 @@ function removeDuplicates(nums) {
             slow++; // Move to next position
             nums[slow] = nums[fast]; // Place unique element
         }
-    }
+    } 
     
     return slow + 1; // Length of unique elements
 }
