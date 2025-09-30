@@ -1,5 +1,8 @@
 //function currying is making a copy of a function and creating more methods out of it.
 
+
+//using bind method for currying
+
 let multiply = function(x,y,z){
     console.log(x*y*z);
 }
@@ -17,3 +20,15 @@ multiplyByFour(5);
 let multiplyByFive = multiply.bind(this,6);
 multiplyByFive(5,3);
 // it will ignore 3 and take 6 and 5 as arguments o/p:30
+
+
+//using closures for currying
+
+let multi = function(x){
+    return function(y){
+        console.log(x * y);
+    }
+}
+
+let multiTwo = multi(20);
+multiTwo(10);
