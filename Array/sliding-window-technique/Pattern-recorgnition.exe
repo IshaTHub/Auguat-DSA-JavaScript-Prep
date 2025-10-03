@@ -1,0 +1,78 @@
+📋 Pattern Recognition - When to Use Sliding Window
+
+🚨 KEYWORDS THAT SCREAM "SLIDING WINDOW":
+
+"Subarray" or "Substring"
+"Consecutive elements"
+"Contiguous"
+"Window"
+"Range"
+"Maximum/Minimum" of subarrays
+"Longest/Shortest" substring/subarray
+"At most K" or "Exactly K"
+
+✅ When to Use:
+
+Problem involves contiguous sequences (subarrays/substrings)
+Need to find optimal (max/min/longest/shortest) subarray
+Has constraints on the window (size, sum, distinct elements)
+
+❌ When NOT to Use:
+
+Need non-contiguous elements (use DP or other techniques)
+Need all subsequences (use recursion/backtracking)
+No concept of "sliding" makes sense
+
+🎪 The Two Types You MUST Know
+Type 1: FIXED SIZE WINDOW (Easier)
+Pattern: Window size is given/constant (k)
+
+Window size = 3
+[1, 4, 2, 10, 2, 3, 1, 0, 20]
+[---]           ← Window 1
+   [---]        ← Window 2 (slide right)
+      [---]     ← Window 3 (slide right)
+
+
+Type 2: DYNAMIC SIZE WINDOW (Trickier but More Common)
+Pattern: Window size changes based on conditions
+
+Find longest substring with at most 2 distinct chars: "eceba"
+[e]              ← Window grows
+[ec]             ← Window grows (2 distinct, valid)
+[ece]            ← Window grows (2 distinct, valid)
+[eceb]           ← Invalid! (3 distinct) 
+ [ceb]           ← Shrink from left until valid
+ [ceba]          ← Invalid again!
+  [eba]          ← Shrink until valid
+
+
+
+
+💡 Problem-Solving Framework
+Step 1: Identify Window Type
+Ask: "Is the window size fixed or variable?"
+
+Fixed → Use template 1
+Variable → Use template 2
+
+Step 2: Define "Valid Window"
+Ask: "What makes a window valid?"
+
+Sum equals/less than target?
+At most K distinct elements?
+All characters meet condition?
+
+Step 3: Choose Data Structure
+Common choices:
+
+Number/Sum tracking → Simple variables
+Frequency counting → Map/Object
+Distinct elements → Set
+Multiple conditions → Multiple variables
+
+Step 4: Determine What to Track
+
+Current window state (sum, count, etc.)
+Best result so far (max, min, longest, etc.)
+Additional info (frequency map, last seen index, etc.)
