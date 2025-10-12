@@ -9,11 +9,11 @@ var avoidFlood = function(rains) {
             const lake = rains[i];
             ans[i] = -1;
             
-            // If lake is already full, we need to dry it before this day
+            
             if (fullLakes.has(lake)) {
                 const prevDay = fullLakes.get(lake);
                 
-                // Find a dry day between prevDay and current day
+                
                 let foundDryDay = false;
                 for (let j = 0; j < dryDays.length; j++) {
                     if (dryDays[j] > prevDay && dryDays[j] < i) {
