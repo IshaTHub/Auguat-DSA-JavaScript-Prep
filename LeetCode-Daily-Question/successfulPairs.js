@@ -6,7 +6,7 @@ var successfulPairs = function(spells, potions, success) {
     for (const spell of spells) {
         const minPotion = Math.ceil(success / spell);
         
-        // Binary search for first potion >= minPotion
+        
         let left = 0, right = m;
         while (left < right) {
             const mid = Math.floor((left + right) / 2);
